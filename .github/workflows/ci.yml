@@ -35,14 +35,14 @@ jobs:
       - name: Generate map data
         run: node scripts/generate-map-data.js
 
+      - name: Build Domain package
+        run: pnpm --filter @scotland-yard-online/domain build
+
       - name: Run Domain tests
         run: pnpm --filter @scotland-yard-online/domain test
 
       - name: Run Server tests
         run: pnpm --filter @scotland-yard-online/server test
-
-      - name: Build packages
-        run: pnpm --filter @scotland-yard-online/domain build
 
   e2e:
     runs-on: ubuntu-latest
@@ -68,6 +68,9 @@ jobs:
 
       - name: Generate map data
         run: node scripts/generate-map-data.js
+
+      - name: Build Domain package
+        run: pnpm --filter @scotland-yard-online/domain build
 
       - name: Install Playwright browsers
         run: pnpm --filter @scotland-yard-online/e2e exec playwright install chromium
