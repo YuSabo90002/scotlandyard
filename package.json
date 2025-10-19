@@ -1,0 +1,26 @@
+{
+  "name": "scotland-yard-online",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Scotland Yard online multiplayer board game with React + Phaser 3",
+  "scripts": {
+    "test": "pnpm -r test",
+    "build": "pnpm -r build",
+    "dev:client": "pnpm --filter @scotland-yard-online/client dev",
+    "dev:server": "pnpm --filter @scotland-yard-online/server dev",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write \"packages/**/*.{ts,tsx,json,md}\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.13.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}
